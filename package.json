@@ -9,13 +9,16 @@
   "main": "dist/index.js",
   "scripts": {
     "ng": "ng",
+    "build-learn-atelier": "ng build",
     "build-electron": "tsc --project projects/electron/tsconfig.json",
     "wait-for-serve-learn-atelier": "wait-on http://localhost:4200",
-    "start": "concurrently \"yarn build-electron\" \"yarn serve-learn-atelier\" \"yarn wait-for-serve-learn-atelier && electron-forge start\"",
-    "learn-atelier": "ng build",
+    "watch-learn-atelier": "ng build --watch --configuration development",
     "serve-learn-atelier": "ng serve learn-atelier",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "concurrently \"yarn build-electron\" \"yarn serve-learn-atelier\" \"yarn wait-for-serve-learn-atelier && electron-forge start\"",
+    "test": "ng test",
+    "package": "yarn build-electron && yarn build-learn-atelier && electron-forge package",
+    "make": "yarn build-electron && yarn build-learn-atelier && electron-forge make",
+    "publish-app": "yarn build-electron && yarn build-learn-atelier && electron-forge publish"
   },
   "private": true,
   "dependencies": {
