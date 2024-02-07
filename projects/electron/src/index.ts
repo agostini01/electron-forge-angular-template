@@ -19,9 +19,9 @@ const createWindow = (): void => {
         }
     });
 
-
-
-    const startURL = app.isPackaged ? `file://${path.join(__dirname, 'learn-atelier', 'index.html')}` : `http://localhost:4200`;
+    const startURL = app.isPackaged 
+        ? `file://${path.join(__dirname, 'learn-atelier', 'browser', 'index.html')}` 
+        : `http://localhost:4200`;
 
     mainWindow.loadURL(startURL);
 

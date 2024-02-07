@@ -29,3 +29,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Source Instructions
 
 https://medium.com/@ahmed.loudghiri/bridging-the-gap-crafting-an-angular-electron-application-with-typescript-using-angular-cli-and-74cb359daa4a
+
+## Last
+
+```
+# Works
+yarn start
+
+# Works
+yarn package
+```
